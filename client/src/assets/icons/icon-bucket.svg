@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 512 512"
+     width="512"
+     height="512">
+
+
+  <mask id="bucket-mask">
+    <rect width="512" height="512" fill="white" />
+
+ 
+    <rect x="192" y="224" width="32" height="224" fill="black"/>
+    <rect x="288" y="224" width="32" height="224" fill="black"/>
+  </mask>
+
+  <g fill="currentColor" mask="url(#bucket-mask)">
+
+    <path d="
+      M152 32
+      c0 -17.7 14.3 -32 32 -32
+      h144
+      c17.7 0 32 14.3 32 32
+      v16
+      h112
+      c17.7 0 32 14.3 32 32
+      v48
+      H8
+      V80
+      c0 -17.7 14.3 -32 32 -32
+      h112
+      V32
+    "/>
+
+    <path d="M64 176l24 304c1.8 17.7 16.6 32 34.4 32h266.2c17.8 0 32.6-14.3 34.4-32l24-304H64z"/>
+  </g>
+
+</svg>
