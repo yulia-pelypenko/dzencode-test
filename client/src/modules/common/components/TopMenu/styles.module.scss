@@ -1,0 +1,13 @@
+.topmenu {
+  width: 100%;
+  z-index: 20;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  background: $color-white;
+  padding: 15px $menu-width;
+}
+
+.topmenu__today {
+  font-weight: 600;
+}
+
+
