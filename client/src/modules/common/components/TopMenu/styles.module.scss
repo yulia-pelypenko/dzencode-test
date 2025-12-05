@@ -1,7 +1,9 @@
 .topmenu {
+  width: 100%;
+  z-index: 20;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
   background: $color-white;
   padding: 15px $menu-width;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .topmenu__today {

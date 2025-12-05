@@ -11,16 +11,17 @@ export const TopMenu: FC = () => {
   const { date } = useDate();
 
   const formatedTime = formatTime(date);
-  const formatedDate = formatDate(date)
-
+  const formatedDate = formatDate(date);
 
   return (
-    <header className={`d-flex justify-content-between align-items-center ${styles.topmenu}`}>
-      <div className="d-flex align-items-center gap-3">
-        <InventoryLogo />
-      </div>
+    <header
+      className={`d-flex justify-content-between align-items-center position-relative ${styles.topmenu}`}
+    >
+      <InventoryLogo />
 
-      <div className={`d-flex align-items-end gap-4 ${styles.topmenu__datetime}`}>
+      <div
+        className={`d-flex align-items-end gap-4 ${styles.topmenu__datetime}`}
+      >
         <div className="text-start">
           <div className={styles.topmenu__today}>Today</div>
           <div className={styles.topmenu__date}>{formatedDate}</div>
@@ -34,4 +35,3 @@ export const TopMenu: FC = () => {
     </header>
   );
 };
-
