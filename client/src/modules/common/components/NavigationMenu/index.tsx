@@ -6,7 +6,7 @@ import { mockUser } from "@/mock/userMock";
 
 export const NavigationMenu = () => {
   return (
-    <nav className={`d-flex flex-column align-items-center gap-5 ${styles.navmenu}`}>
+    <nav className={`d-flex flex-column flex-shrink-0 align-items-center gap-5 ${styles.navmenu}`}>
       <div className={`rounded-circle overflow-hidden ${styles.navmenu__user}`}>
         <img
           src={mockUser.avatar}
