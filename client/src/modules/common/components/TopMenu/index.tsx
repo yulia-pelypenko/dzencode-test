@@ -3,14 +3,13 @@ import styles from "./styles.module.scss";
 import { InventoryLogo } from "@common/components/InventoryLogo";
 import ClockIcon from "@/assets/icons/clock.svg?react";
 
-import { formatTime } from "@/modules/common/utils/formatTime";
 import { useDate } from "@/modules/common/utils/useDate";
 import { formatDate } from "@/modules/common/utils/formatDate";
 
 export const TopMenu: FC = () => {
   const { date } = useDate();
 
-  const formatedTime = formatTime(date);
+  const formatedTime = formatDate(date, "time");
   const formatedDate = formatDate(date);
 
   return (

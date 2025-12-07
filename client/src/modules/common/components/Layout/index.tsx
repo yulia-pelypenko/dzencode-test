@@ -7,10 +7,10 @@ export const Layout = () => {
     <div className="d-flex flex-column vh-100">
       <TopMenu />
 
-      <div className="d-flex flex-grow-1">
+      <div className="d-flex flex-grow-1 ">
         <NavigationMenu />
 
-        <main className="flex-grow-1 overflow-auto p-4">
+        <main className="flex-grow-1 overflow-auto px-5">
           <Outlet />
         </main>
       </div>
