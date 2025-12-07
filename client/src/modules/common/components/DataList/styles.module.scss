@@ -1,0 +1,25 @@
+.list {
+  overflow-x: auto;
+  padding-bottom: 8px; 
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #e5e9eb;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #cdd3d6;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  scrollbar-color: #cdd3d6 #e5e9eb;
+  scrollbar-width: thin;
+}
