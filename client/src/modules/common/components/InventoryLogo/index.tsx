@@ -5,7 +5,7 @@ import { appConfig } from "@/config";
 
 type SizeVariant = "small" | "medium" | "large";
 
-type Props = {
+interface Props {
   size?: SizeVariant;
 };
 

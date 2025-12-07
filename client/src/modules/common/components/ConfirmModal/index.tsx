@@ -2,7 +2,7 @@ import type { FC, ReactNode } from "react";
 import styles from "./styles.module.scss";
 import BucketIcon from "@/assets/icons/icon-bucket.svg?react";
 
-type ConfirmModalProps = {
+interface Props {
   title?: string;
   text?: string;
   children?: ReactNode;
@@ -13,7 +13,7 @@ type ConfirmModalProps = {
   onConfirm: () => void;
 };
 
-export const ConfirmModal: FC<ConfirmModalProps> = ({
+export const ConfirmModal: FC<Props> = ({
   title = "Вы уверены",
   text,
   children,
