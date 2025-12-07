@@ -1,0 +1,12 @@
+.product {
+  &__title,
+  &__order,
+  &__type {
+    width: 350px;
+    overflow-wrap: break-word;
+  }
+
+  &__photo {
+    width: 100px;
+  }
+}
