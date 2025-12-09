@@ -2,3 +2,14 @@ html, body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.8px; 
 }
+
+.page {
+  margin: 3rem 0;
+  opacity: 0;
+  animation: fadeIn .5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to   { opacity: 1 }
+}
