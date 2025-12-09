@@ -1,17 +1,27 @@
 .backdrop {
   position: fixed;
   inset: 0;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
 
   background: rgba(0, 0, 0, 0.45);
-  z-index: 1000;
+  z-index: 10000;
+
+  animation: backdropFade 0.5s ease forwards;
+
+  @keyframes backdropFade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 .modal__content {
-  
   border: none;
   border-radius: 8px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
@@ -21,29 +31,13 @@
   color: $text-secondary;
 }
 
-
 .modal__close {
   position: absolute;
   right: 0;
   top: 0;
   transform: translate(50%, -50%);
 
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: none;
-
-  background: $color-white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  color: $text-secondary;
-
   transition: transform 0.2s ease, color 0.2s ease;
-
-  &:hover {
-    background: $color-gray-light;
-    color: $text-primary;
-    transform: translate(50%, -50%) scale(1.15);
-  }
 }
 
 .modal__footer {
@@ -52,7 +46,8 @@
   padding: 20px;
 }
 
-.modal__cancel, .modal__delete{
+.modal__cancel,
+.modal__delete {
   text-transform: uppercase;
   font-size: calc(#{$font-size-base} * 0.8);
   font-weight: 600;

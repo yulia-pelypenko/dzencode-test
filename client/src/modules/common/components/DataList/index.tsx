@@ -1,5 +1,5 @@
 import type { FC, PropsWithChildren } from "react";
-import styles from './styles.module.scss'
+import styles from "./styles.module.scss";
 
 interface Props extends PropsWithChildren {
   className?: string;
@@ -7,8 +7,14 @@ interface Props extends PropsWithChildren {
 
 export const DataList: FC<Props> = ({ children, className }) => {
   return (
-    <ul className={`${styles.list} ${className ?? ""} overflow-x-auto list-unstyled d-flex flex-column flex-wrap gap-3 py-4`}>
+    <ul
+      className={`${
+        styles.list
+      }overflow-x-auto list-unstyled d-flex flex-column flex-wrap gap-3 pb-4  ${
+        className ?? ""
+      } `}
+    >
       {children}
     </ul>
   );
-}
+};

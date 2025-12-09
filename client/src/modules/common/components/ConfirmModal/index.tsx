@@ -1,21 +1,20 @@
 import type { FC, ReactNode } from "react";
 import styles from "./styles.module.scss";
 import BucketIcon from "@/assets/icons/icon-bucket.svg?react";
+import { CloseButton } from "@/modules/common/components/CloseButton";
 
 interface Props {
   title?: string;
-  text?: string;
   children?: ReactNode;
   confirmText?: string;
   cancelText?: string;
   icon?: FC<React.SVGProps<SVGSVGElement>>;
   onCancel: () => void;
   onConfirm: () => void;
-};
+}
 
 export const ConfirmModal: FC<Props> = ({
   title = "Вы уверены",
-  text,
   children,
   confirmText = "Удалить",
   cancelText = "Отменить",
@@ -28,20 +27,18 @@ export const ConfirmModal: FC<Props> = ({
       <div className={`modal show d-block`} tabIndex={-1}>
         <div className="modal-dialog modal-dialog-centered">
           <div className={`modal-content ${styles.modal__content}`}>
-            <button
-              type="button"
-              className={styles.modal__close}
-              onClick={onCancel}
-            >
-              ✕
-            </button>
+            <CloseButton className={styles.modal__close} onClick={onCancel} />
 
             <div className="modal-header">
-              <h5 className={`modal-title ${styles.modal__title}`}>{title}</h5>
+              <h5 className={`modal-title ${styles.modal__title} text-center`}>
+                {title}
+              </h5>
             </div>
 
-            <div className={`modal-body d-flex align-items-center gap-3 px-4`}>
-              {children ?? <p>{text}</p>}
+            <div
+              className={`modal-body d-flex justify-content-center align-items-center gap-3 px-4`}
+            >
+              {children}
             </div>
 
             <div

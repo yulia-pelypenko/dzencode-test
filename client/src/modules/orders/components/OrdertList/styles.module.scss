@@ -1,0 +1,31 @@
+.order__list {
+  overflow: hidden !important;
+}
+
+.left {
+  transition: flex-basis 0.5s ease;
+
+  &.opened {
+    flex-basis: 35%;
+  }
+
+  &.closed {
+    flex-basis: 100%;
+  }
+}
+
+.right {
+  transition: flex-basis 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  flex-basis: 0%;
+
+  &.opened {
+    flex-basis: 66%;
+    opacity: 1;
+  }
+
+  &.closed {
+    flex-basis: 0%;
+    opacity: 0;
+  }
+}
