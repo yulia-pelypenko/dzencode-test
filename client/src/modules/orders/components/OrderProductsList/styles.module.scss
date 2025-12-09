@@ -1,0 +1,10 @@
+.order-products__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(50%, -50%);
+
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+
