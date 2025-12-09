@@ -6,7 +6,7 @@ interface Props extends PropsWithChildren {
 }
 
 export const DataRow: FC<Props> = ({ children, className }) => (
-  <li className={`${styles.list__row} ${className ?? ""} bg-white rounded border p-3 d-flex align-items-center text-center gap-5 justify-content-between`}>
+  <li className={`${styles.list__row} bg-white rounded border p-3 d-flex align-items-center text-center gap-5 justify-content-between ${className ?? ""}`}>
     {children}
   </li>
 );
