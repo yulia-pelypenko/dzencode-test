@@ -2,7 +2,7 @@ import type { FC } from "react";
 import { DataRow } from "@/modules/common/components/DataRow";
 import styles from "./styles.module.scss";
 import { formatDate, type DateFormat } from "@/modules/common/utils/formatDate";
-import type { IProduct } from "@/modules/types/IProduct";
+import type { IProduct } from "@/modules/products/types/IProduct";
 import { ordersMock } from "@/mock/dataMock";
 
 interface Props {
@@ -16,7 +16,8 @@ export const ProductRow: FC<Props> = ({ product }) => {
 
   const GuaranteeRow = (format: DateFormat) => (
     <div className="text-muted small text-nowrap">
-      from {formatDate(guaranteeStart, format)} to {formatDate(guaranteeEnd, format)}
+      from {formatDate(guaranteeStart, format)} to{" "}
+      {formatDate(guaranteeEnd, format)}
     </div>
   );
 
@@ -26,7 +27,11 @@ export const ProductRow: FC<Props> = ({ product }) => {
         {product.title}
       </div>
 
-      <img src={product.photo} alt={product.type} className={styles.product__photo} />
+      <img
+        src={product.photo}
+        alt={product.type}
+        className={styles.product__photo}
+      />
 
       <div className={styles.product__type}>{product.type}</div>
 
