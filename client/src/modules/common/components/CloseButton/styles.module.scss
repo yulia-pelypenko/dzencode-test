@@ -1,0 +1,15 @@
+.close-button {
+  width: 30px;
+  height: 30px;
+  background: $color-white;
+  color: $text-secondary;
+
+  transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-gray-light;
+    color: $text-primary;
+    transform: translate(50%, -50%) scale(1.15);
+  }
+}
