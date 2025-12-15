@@ -7,7 +7,7 @@ export const envValidationSchema = Joi.object({
     .default('development'),
   CLIENT_URL: Joi.string().required(),
 
-  PORT: Joi.number().port().default(3000),
+  SERVER_PORT: Joi.number().port().default(3000),
   // Database
   POSTGRES_HOST: Joi.string().hostname().required(),
   POSTGRES_PORT: Joi.number().port().default(5432),
